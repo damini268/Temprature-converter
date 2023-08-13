@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+    <link href="https:"//fonts.googleapis.com/css2?family=open+Sans:ital@1&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+        <h1>Temprature Converter</h1>
+    </div>
+    
+  <div class="temp">
+    <div class="input-div">
+        <label>
+            Celcius
+        </label>
+
+        <input type="number" value="0" id="cel" class="inp">
+    </div>
+    <div class="input-div">
+        <label>Farenhite</label>
+        <input type="number" value="32" id="fah"class="inp">
+    </div>
+  </div>
+  </div>
+  <script>
+    var cel  = document.getElementById("cel");
+    var fah=  document.getElementById("fah");
+
+
+
+cel.addEventListener('input',function(){
+    let c = this.value;
+    let f = (c*9/5) + 32;
+    
+
+    fah.value = f;
+})
+
+
+
+fah.addEventListener('input',function(){
+    let f = this.value;
+    let c = (f-32)*5/9;
+    
+
+    cel.value = c;
+})
+  </script>
+</body>
+</html>
